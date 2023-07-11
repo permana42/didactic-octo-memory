@@ -1,0 +1,5 @@
+import gitlab
+gl=gitlab.Gitlab(gitlab_url,gitlab_token)
+project=gl.projects.get(149)
+issue=project.issues.get(1)
+note=issue.notes.create(data={"body":"text"})
